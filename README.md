@@ -1,0 +1,2 @@
+I have built a Phishing Email Detection System using Python for the backend. It uses the TinyBERT model and is deployed with FastAPI. A basic GUI is provided using Tkinter.
+The system detects phishing content in the body of an email with an accuracy of 75%. If phishing content is present, it flags the email as "Phishing" along with a confidence percentage. If no phishing content is detected, it labels the email as "Legitimate."
