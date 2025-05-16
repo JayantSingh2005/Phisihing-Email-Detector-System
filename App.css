@@ -1,0 +1,429 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background: #111827; /* Dark dashboard blue */
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.main-content {
+  flex: 2;
+  padding: 40px 32px 40px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #181c25; /* Slightly lighter dark for card effect */
+  border-radius: 0 24px 24px 0;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  margin: 32px 0 32px 32px;
+}
+
+.title {
+  color: #aad6ec;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.input-section {
+  margin-bottom: 18px;
+}
+
+.input-label {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.email-input {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 10px;
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  background: #23293a;
+  color: #fff;
+  resize: vertical;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-top: 6px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.email-input:focus {
+  box-shadow: 0 0 0 2px #aad6ec;
+}
+
+.predict-button {
+  background: #aad6ec;
+  color: #1a2a4f;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s, color 0.2s;
+}
+.predict-button:hover {
+  background: #7fc1e3;
+  color: #102040;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background: rgba(170, 214, 236, 0.12);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.result.legitimate {
+  border-left: 6px solid #4caf50;
+}
+.result.phishing {
+  border-left: 6px solid #e53935;
+}
+
+.history-section {
+  flex: 1.2;
+  background: #181c25;
+  border-radius: 24px;
+  margin: 32px 32px 32px 0;
+  padding: 32px 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 400px;
+  height: fit-content;
+}
+
+.history-title {
+  color: #aad6ec;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.history-list {
+  max-height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  background: rgba(170, 214, 236, 0.10);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #fff;
+  font-size: 0.98rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  border-left: 4px solid #aad6ec;
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .main-content, .history-section {
+    margin: 24px;
+    border-radius: 18px;
+  }
+  .main-content {
+    padding: 32px 16px;
+  }
+  .history-section {
+    padding: 24px 12px;
+    max-width: 100%;
+    min-width: unset;
+  }
+}
+
+.threat-scanner-bg {
+  min-height: 100vh;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.threat-card {
+  background: #181c25;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  padding: 36px 32px 28px 32px;
+  width: 440px;
+  max-width: 96vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.threat-title-row {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #aad6ec;
+  margin-bottom: 18px;
+  gap: 8px;
+}
+
+.threat-title-icon {
+  color: #aad6ec;
+  display: flex;
+  align-items: center;
+}
+
+.drop-area {
+  background: rgba(255,255,255,0.01);
+  border: 1.5px dashed #2a3650;
+  border-radius: 14px;
+  padding: 36px 18px 28px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+  transition: border-color 0.2s;
+}
+.upload-icon {
+  color: #4f8edc;
+  margin-bottom: 12px;
+}
+.drop-message {
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.drop-sub {
+  color: #b6c2d6;
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+}
+.select-files-btn {
+  background: #4f8edc;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s;
+}
+.select-files-btn:hover {
+  background: #3576c7;
+}
+
+.threat-actions-row {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 0 0;
+}
+.paste-text-btn {
+  flex: 1;
+  background: #fff;
+  color: #181c25;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  padding: 13px 0;
+  font-size: 1.08rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s;
+}
+.paste-text-btn:hover {
+  background: #e6eaf2;
+}
+.quick-scan-btn {
+  flex: 1;
+  background: #4f8edc;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 13px 0;
+  font-size: 1.08rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+.quick-scan-btn:hover {
+  background: #3576c7;
+}
+
+.threat-desc {
+  color: #b6c2d6;
+  font-size: 0.97rem;
+  margin-top: 22px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .threat-card {
+    padding: 18px 4vw 18px 4vw;
+    width: 98vw;
+  }
+}
+
+.scan-result-card {
+  background: #23293a;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 1.08rem;
+  border-left: 6px solid #aad6ec;
+  transition: border-color 0.2s;
+}
+.scan-result-card.legitimate {
+  border-left: 6px solid #4caf50;
+}
+.scan-result-card.phishing {
+  border-left: 6px solid #e53935;
+}
+.scan-result-card.error {
+  border-left: 6px solid #e67c17;
+  color: #ffd8b0;
+}
+.scan-result-title {
+  font-weight: 600;
+  font-size: 1.13rem;
+  margin-bottom: 4px;
+}
+.scan-result-message {
+  font-size: 1.01rem;
+  color: #aad6ec;
+}
+
+.text-area-block {
+  background: rgba(255,255,255,0.01);
+  border: 1.5px dashed #2a3650;
+  border-radius: 14px;
+  padding: 24px 14px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 28px;
+  transition: border-color 0.2s;
+}
+.email-textarea {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 10px;
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  background: #23293a;
+  color: #fff;
+  resize: vertical;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 14px;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.email-textarea:focus {
+  box-shadow: 0 0 0 2px #aad6ec;
+}
+.text-area-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.cancel-text-btn {
+  background: #23293a;
+  color: #aad6ec;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+}
+.cancel-text-btn:hover {
+  background: #181c25;
+  color: #fff;
+}
+.scan-text-btn {
+  background: #4f8edc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.scan-text-btn:disabled {
+  background: #7faee3;
+  cursor: not-allowed;
+}
+.scan-text-btn:hover:not(:disabled) {
+  background: #3576c7;
+}
